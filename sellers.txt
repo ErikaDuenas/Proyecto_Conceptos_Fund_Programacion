@@ -1,0 +1,50 @@
+ID Type: CE
+ID number : 192702
+First Name: Miguel
+Last Name: Martínez
+
+ID Type: CE
+ID number : 469968
+First Name: Ana
+Last Name: Hernández
+
+ID Type: CE
+ID number : 308085
+First Name: Pedro
+Last Name: Díaz
+
+ID Type: CE
+ID number : 147799
+First Name: Pedro
+Last Name: Gómez
+
+ID Type: CC
+ID number : 236991
+First Name: Pedro
+Last Name: López
+
+ID Type: CC
+ID number : 323577
+First Name: Ana
+Last Name: García
+
+ID Type: CE
+ID number : 417556
+First Name: Miguel
+Last Name: Hernández
+
+ID Type: CE
+ID number : 971590
+First Name: Sofia
+Last Name: Ramírez
+
+ID Type: CE
+ID number : 859465
+First Name: Juan
+Last Name: Díaz
+
+ID Type: CC
+ID number : 771232
+First Name: Juan
+Last Name: Hernández
+

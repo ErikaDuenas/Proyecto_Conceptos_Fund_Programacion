@@ -1,0 +1,15 @@
+=== Juan Díaz sales report ===
+
+Product: Cellphone
+Quantity sold: 11
+Total sold: 6592.85
+
+Product: wireless headphones
+Quantity sold: 3
+Total sold: 294.42
+
+Product: Smartwatch
+Quantity sold: 15
+Total sold: 4807.5
+
+Total sold by Juan Díaz: 11694.77

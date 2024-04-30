@@ -1,0 +1,7 @@
+=== Sofia Ramírez sales report ===
+
+Product: Tablet
+Quantity sold: 9
+Total sold: 2341.35
+
+Total sold by Sofia Ramírez: 2341.35

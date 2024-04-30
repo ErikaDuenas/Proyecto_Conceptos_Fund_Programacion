@@ -1,0 +1,15 @@
+=== Ana Hernández sales report ===
+
+Product: Cellphone
+Quantity sold: 9
+Total sold: 5394.150000000001
+
+Product: Tablet
+Quantity sold: 6
+Total sold: 1560.8999999999999
+
+Product: 4K TV
+Quantity sold: 6
+Total sold: 4127.04
+
+Total sold by Ana Hernández: 11082.09

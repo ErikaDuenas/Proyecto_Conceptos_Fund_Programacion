@@ -1,0 +1,19 @@
+=== Ana García sales report ===
+
+Product: Cellphone
+Quantity sold: 2
+Total sold: 1198.7
+
+Product: wireless headphones
+Quantity sold: 1
+Total sold: 98.14
+
+Product: Smartwatch
+Quantity sold: 2
+Total sold: 641.0
+
+Product: Laptop
+Quantity sold: 7
+Total sold: 2487.94
+
+Total sold by Ana García: 4425.780000000001

@@ -1,0 +1,11 @@
+=== Miguel Martínez sales report ===
+
+Product: wireless headphones
+Quantity sold: 4
+Total sold: 392.56
+
+Product: Smartwatch
+Quantity sold: 1
+Total sold: 320.5
+
+Total sold by Miguel Martínez: 713.06

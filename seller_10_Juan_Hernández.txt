@@ -1,0 +1,19 @@
+=== Juan Hernández sales report ===
+
+Product: Cellphone
+Quantity sold: 6
+Total sold: 3596.1000000000004
+
+Product: wireless headphones
+Quantity sold: 1
+Total sold: 98.14
+
+Product: Smartwatch
+Quantity sold: 5
+Total sold: 1602.5
+
+Product: Tablet
+Quantity sold: 12
+Total sold: 3121.7999999999997
+
+Total sold by Juan Hernández: 8418.539999999999

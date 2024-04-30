@@ -1,0 +1,19 @@
+=== Miguel Hernández sales report ===
+
+Product: Cellphone
+Quantity sold: 8
+Total sold: 4794.8
+
+Product: Tablet
+Quantity sold: 5
+Total sold: 1300.75
+
+Product: 4K TV
+Quantity sold: 8
+Total sold: 5502.72
+
+Product: Laptop
+Quantity sold: 5
+Total sold: 1777.1000000000001
+
+Total sold by Miguel Hernández: 13375.37

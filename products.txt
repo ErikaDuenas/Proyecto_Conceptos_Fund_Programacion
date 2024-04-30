@@ -1,0 +1,24 @@
+ID: 01
+Name: Cellphone
+Price: 599.35
+
+ID: 02
+Name: Laptop
+Price: 355.42
+
+ID: 03
+Name: Tablet
+Price: 260.15
+
+ID: 04
+Name: wireless headphones
+Price: 98.14
+
+ID: 05
+Name: Smartwatch
+Price: 320.5
+
+ID: 06
+Name: 4K TV
+Price: 687.84
+

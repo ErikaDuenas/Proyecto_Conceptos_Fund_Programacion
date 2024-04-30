@@ -1,0 +1,23 @@
+=== Pedro López sales report ===
+
+Product: Cellphone
+Quantity sold: 12
+Total sold: 7192.200000000001
+
+Product: wireless headphones
+Quantity sold: 10
+Total sold: 981.4
+
+Product: Tablet
+Quantity sold: 2
+Total sold: 520.3
+
+Product: 4K TV
+Quantity sold: 2
+Total sold: 1375.68
+
+Product: Laptop
+Quantity sold: 6
+Total sold: 2132.52
+
+Total sold by Pedro López: 12202.1

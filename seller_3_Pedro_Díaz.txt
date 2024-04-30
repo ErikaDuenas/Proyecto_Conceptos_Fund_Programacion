@@ -1,0 +1,27 @@
+=== Pedro Díaz sales report ===
+
+Product: Cellphone
+Quantity sold: 2
+Total sold: 1198.7
+
+Product: wireless headphones
+Quantity sold: 9
+Total sold: 883.26
+
+Product: Smartwatch
+Quantity sold: 9
+Total sold: 2884.5
+
+Product: Tablet
+Quantity sold: 10
+Total sold: 2601.5
+
+Product: 4K TV
+Quantity sold: 4
+Total sold: 2751.36
+
+Product: Laptop
+Quantity sold: 4
+Total sold: 1421.68
+
+Total sold by Pedro Díaz: 11741.0

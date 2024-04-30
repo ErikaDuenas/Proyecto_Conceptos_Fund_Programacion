@@ -1,0 +1,15 @@
+=== Pedro Gómez sales report ===
+
+Product: wireless headphones
+Quantity sold: 8
+Total sold: 785.12
+
+Product: Smartwatch
+Quantity sold: 14
+Total sold: 4487.0
+
+Product: Laptop
+Quantity sold: 9
+Total sold: 3198.78
+
+Total sold by Pedro Gómez: 8470.9
