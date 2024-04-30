@@ -25,47 +25,47 @@ public class GenerateInfoFiles {
     }
 
     public static List<Seller> sellerGenerator(int numberOfSellers) {
-        List<Seller> sellers = new ArrayList<>(); // Creamos una lista para almacenar los vendedores generados
+        List<Seller> sellers = new ArrayList<>(); // We create a list to store the generated sellers
 
-        for (int i = 0; i < numberOfSellers; i++) { // Iteramos para crear el número especificado de vendedores
+        for (int i = 0; i < numberOfSellers; i++) { // We iterate to create the specified number of sellers
             Random random = new Random();
 
-            String documentType = random.nextBoolean() ? "CC" : "CE"; // Generamos aleatoriamente el tipo de documento
-            long documentNumber = 100000 + random.nextInt(900000); // Generamos aleatoriamente el número de documento
+            String documentType = random.nextBoolean() ? "CC" : "CE"; // We randomly generate the type of document
+            long documentNumber = 100000 + random.nextInt(900000); // We randomly generate the document number
 
-            String firstName = sellersFirstName[random.nextInt(sellersFirstName.length)]; // Seleccionamos aleatoriamente un nombre de la lista de nombres disponibles
-            String lastName = sellersLastName[random.nextInt(sellersLastName.length)]; // Seleccionamos aleatoriamente un apellido de la lista de apellidos disponibles
+            String firstName = sellersFirstName[random.nextInt(sellersFirstName.length)]; // We randomly select a name from the list of available names
+            String lastName = sellersLastName[random.nextInt(sellersLastName.length)]; // We randomly select a surname from the list of available surnames
 
-            Seller seller = new Seller(); // Creamos una instancia de vendedor
-            seller.setDocumentType(documentType); // Establecemos el tipo de documento
-            seller.setDocumentNumber(documentNumber); // Establecemos el número de documento
-            seller.setFirstName(firstName); // Establecemos el nombre
-            seller.setLastName(lastName); // Establecemos el apellido
+            Seller seller = new Seller(); //We create a seller instance
+            seller.setDocumentType(documentType); // We establish the type of document
+            seller.setDocumentNumber(documentNumber); // We establish the document number
+            seller.setFirstName(firstName); //We set the name
+            seller.setLastName(lastName); // We establish the last name
 
-            sellers.add(seller); // Agregamos el vendedor a la lista
+            sellers.add(seller); // We add the seller to the list
         }
 
-        return sellers; // Devolvemos la lista de vendedores generada
+        return sellers; // We return the generated seller list
     }
 
     public static void assignProductsToSellers(List<Seller> sellers) {
         Random random = new Random();
 
         for (Seller seller : sellers) {
-            Map<Product, Integer> productsSold = new HashMap<>(); // Mapa para rastrear los productos vendidos por cantidad
+            Map<Product, Integer> productsSold = new HashMap<>(); //Map to track products sold by quantity
 
-            int numberOfProductsSold = random.nextInt(PRODUCTS.size()) + 1; // Número aleatorio de productos vendidos
+            int numberOfProductsSold = random.nextInt(PRODUCTS.size()) + 1; // Random number of products sold
 
             for (int i = 0; i < numberOfProductsSold; i++) {
                 int productIndex = random.nextInt(PRODUCTS.size());
                 Product product = PRODUCTS.get(productIndex);
-                int quantitySold = random.nextInt(10) + 1; // Cantidad aleatoria vendida del producto
+                int quantitySold = random.nextInt(10) + 1; // Random quantity sold of the product
 
-                // Actualiza el mapa de productos vendidos
+                //Update the map of sold products
                 productsSold.put(product, productsSold.getOrDefault(product, 0) + quantitySold);
             }
 
-            seller.setProductSold(productsSold); // Establece los productos vendidos por el vendedor
+            seller.setProductSold(productsSold); // Sets the products sold by the seller
         }
     }
 
@@ -92,7 +92,7 @@ public class GenerateInfoFiles {
         }
     }
 
-    // Método para generar el archivo "lista de vendedores.txt"
+    // Method to generate the "seller list.txt" file
     public static void generateSellersListFile(List<Seller> sellers) {
         String fileName = "sellers.txt";
 
@@ -109,17 +109,17 @@ public class GenerateInfoFiles {
         }
     }
 
-    // Método para generar el reporte de ventas de cada vendedor
+    // Method to generate the sales report for each seller
 
 
-    // Método para generar el reporte de ventas por vendedor en formato CSV
+    // Method to generate the sales report by seller in CSV format
     public static void generateSalesReportCSV(List<Seller> sellers) {
         String fileName = "sales_Report_Sellers.csv";
 
         try (FileWriter writer = new FileWriter(fileName)) {
             writer.write("Seller Name,Total Sold\n");
 
-            // Ordenar los vendedores por el total vendido de mayor a menor
+            // Sort sellers by total sold from highest to lowest
             sellers.sort((s1, s2) -> Double.compare(s2.getTotalSales(), s1.getTotalSales()));
 
             for (Seller seller : sellers) {
@@ -139,27 +139,27 @@ public class GenerateInfoFiles {
 
             try (FileWriter writer = new FileWriter(fileName)) {
                 writer.write("=== " + seller.getFirstName() + " " + seller.getLastName() + " sales report ===\n\n");
-                double totalSales = 0; // Inicializa el total de ventas del vendedor
+                double totalSales = 0; // Initializes the seller's sales total
 
-                // Itera sobre los productos vendidos por el vendedor
+                // Iterates over the products sold by the seller
                 for (Map.Entry<Product, Integer> entry : seller.getProductSold().entrySet()) {
                     Product product = entry.getKey();
                     int quantitySold = entry.getValue();
                     double productTotalSales = quantitySold * product.getPrice();
 
-                    // Escribe la información del producto vendido en el archivo
+                    // Write the information of the sold product to the file
                     writer.write("Product: " + product.getProductName() + "\n");
                     writer.write("Quantity sold: " + quantitySold + "\n");
                     writer.write("Total sold: " + productTotalSales + "\n\n");
 
-                    // Actualiza el total de ventas del vendedor
+                    // Update the seller's sales total
                     totalSales += productTotalSales;
                 }
 
-                // Actualiza el total vendido por el vendedor
+                // Updates the total sold by the seller
                 seller.setTotalSales(totalSales);
 
-                // Escribe el total vendido por el vendedor
+                // Write the total sold by the seller
                 writer.write("Total sold by " + seller.getFirstName() + " " + seller.getLastName() + ": " + totalSales + "\n");
 
                 System.out.println("File generated successfully: " + fileName);
@@ -169,7 +169,7 @@ public class GenerateInfoFiles {
         }
     }
 
-    // Método para generar el reporte de cantidad vendida de todos los productos en formato CSV
+    //Method to generate the sold quantity report of all products in CSV format
     public static void generateProductSalesReportCSV(List<Product> products, List<Seller> sellers) {
         String fileName = "Quantity_Sold_Products_Report.csv";
 
@@ -177,22 +177,22 @@ public class GenerateInfoFiles {
             writer.write("Product Name, Unit price, Quantity Sold, Total Sold\n");
 
             for (Product product : products) {
-                // Inicializa la cantidad total vendida y el total vendido para este producto
+                // Initializes the total quantity sold and total sold for this product
                 int totalQuantitySold = 0;
                 double totalSales = 0.0;
 
-                // Itera sobre todos los vendedores
+                // Iterate over all sellers
                 for (Seller seller : sellers) {
-                    // Obtiene la cantidad vendida de este producto por este vendedor
+                    // Gets the quantity sold of this product by this seller
                     int quantitySoldBySeller = seller.getProductSold().getOrDefault(product, 0);
-                    // Agrega la cantidad vendida por este vendedor a la cantidad total vendida
+                    // Add the quantity sold by this seller to the total quantity sold
                     totalQuantitySold += quantitySoldBySeller;
                 }
 
-                // Calcula el total vendido para este producto
+                // Calculate the total sold for this product
                 totalSales = totalQuantitySold * product.getPrice();
 
-                // Escribe la información en el archivo CSV
+                // Write the information to the CSV file
                 writer.write(product.getProductName() + "," + product.getPrice() + ","
                         + totalQuantitySold + "," + totalSales + "\n");
             }
@@ -206,10 +206,10 @@ public class GenerateInfoFiles {
     public static void main(String[] args) {
         List<Seller> sellers = sellerGenerator(10);
 
-        // Asignar productos a los vendedores
+        // Assign products to sellers
         assignProductsToSellers(sellers);
 
-        // Generar archivos
+        // Generate files
         generateProductsListFile(PRODUCTS);
         generateSellersListFile(sellers);
         generateSalesReportBySeller(sellers);
